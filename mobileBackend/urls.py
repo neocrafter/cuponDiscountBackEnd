@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from actors.views import fetch_actors
+from actors.views import fetch_personas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('fetch_actors/', fetch_actors)
+    path('fetch_personas/', fetch_personas)
 ]
