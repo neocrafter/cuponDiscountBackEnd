@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Actor
+from .models import *
 from rest_framework.decorators import api_view
-from .serializers import ActorSerializer
+from .serializers import *
 from rest_framework.response import Response
 
 # Create your views here.
-@api_view(['get'])
+@api_view(['get','post'])
 def fetch_personas(request):
     #fetch all the actor objects
     personas = Personas.objects.all()
